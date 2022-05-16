@@ -10,7 +10,7 @@ function Experience() {
 				<div className={styles.item}>
 					<h2>College</h2>
 					<p>
-						 Key modules included Cyber Security, Animation (2D and 3D),
+						Key modules included Cyber Security, Animation (2D and 3D),
 						Networking, Project Management, Multimedia, E-commerce, Website
 						Production, Animation and Programming and more.
 					</p>
