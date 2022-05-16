@@ -10,6 +10,7 @@
 	right: 0;
 	background: black;
 	height: 10vh;
+	z-index: 10;
 	a {
 		@include flexCenter();
 		flex-direction: column;

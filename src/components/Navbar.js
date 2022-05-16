@@ -7,7 +7,7 @@ function Navbar() {
 		<nav className={styles.navbar}>
 			<Link to="/about">About</Link>
 			<Link to="/experience">Experience</Link>
-			<Link to="/">
+			<Link to="/AhmedMuhammed">
 				<i className="fa-solid fa-house"></i>
 			</Link>
 			<Link to="/projects">Projects</Link>
