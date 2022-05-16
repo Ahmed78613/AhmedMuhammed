@@ -30,6 +30,10 @@ textarea {
 	color: white;
 }
 
+strong {
+	color: $secondary;
+}
+
 ::-webkit-scrollbar {
 	width: 0.25em;
 }

@@ -6,10 +6,9 @@ function Contact() {
 		<main className={styles.contact}>
 			<h1>Contact Page</h1>
 			<p>
-				Donec mattis facilisis imperdiet. Nunc sed suscipit lorem, ut euismod
-				elit. Pellentesque diam elit, consequat id lorem sit amet, cursus cursus
-				leo. Nam ullamcorper bibendum ipsum quis imperdiet. Fusce ut massa
-				purus. Morbi vel risus ultrices, pulvinar quam sit amet, ultrices ante.
+				If you would like to contact me fill please in the form below and I will
+				get back to you as soon as I possibly can. You can also reach me on my
+				LinkedIn or github.
 			</p>
 			<form
 				action="https://formsubmit.co/a91fdbb25681a4f6a5934e8a93a4251c"
