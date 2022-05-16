@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/AhmedMuhammed/static/css/main.6aec7fab.css",
-    "main.js": "/AhmedMuhammed/static/js/main.7874786a.js",
+    "main.js": "/AhmedMuhammed/static/js/main.cbe0c45c.js",
     "static/media/tv-app.png": "/AhmedMuhammed/static/media/tv-app.28b1d1ef96d6be88ef72.png",
     "static/media/static-sites.png": "/AhmedMuhammed/static/media/static-sites.05a39e4b1e463cb1fd52.png",
     "static/media/trivia-app.png": "/AhmedMuhammed/static/media/trivia-app.dce465123013dabfe524.png",
@@ -14,10 +14,10 @@
     "static/media/top-bg.svg": "/AhmedMuhammed/static/media/top-bg.b5f661eae470e7e48fdf7c06d67ff52d.svg",
     "static/media/bottom-bg.svg": "/AhmedMuhammed/static/media/bottom-bg.f3c173e7a51ad669c5aee1836a5fb0f3.svg",
     "main.6aec7fab.css.map": "/AhmedMuhammed/static/css/main.6aec7fab.css.map",
-    "main.7874786a.js.map": "/AhmedMuhammed/static/js/main.7874786a.js.map"
+    "main.cbe0c45c.js.map": "/AhmedMuhammed/static/js/main.cbe0c45c.js.map"
   },
   "entrypoints": [
     "static/css/main.6aec7fab.css",
-    "static/js/main.7874786a.js"
+    "static/js/main.cbe0c45c.js"
   ]
 }
