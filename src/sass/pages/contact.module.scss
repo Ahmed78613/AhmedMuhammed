@@ -1,0 +1,115 @@
+// Utilities
+@import "../utilities/variables.scss";
+@import "../utilities/mixin.scss";
+
+.contact {
+	@include setContainer();
+	max-width: 1000px;
+	text-align: center;
+	h1 {
+		@include setH1();
+		font-size: max(3.5vw, 32px);
+		padding: 0;
+	}
+	form {
+		margin: 1rem auto;
+		max-width: 1000px;
+		display: grid;
+		justify-content: center;
+		align-items: center;
+		grid-template-columns: 1fr 1fr;
+		input,
+		textarea {
+			background-color: rgb(54, 54, 54);
+			border: none;
+			height: 50px;
+			font-family: $poppins;
+			padding-left: 0.7rem;
+			margin: 0.2rem;
+			&:focus {
+				outline: 1px solid $secondary;
+				background-color: rgba(54, 54, 54, 0.6);
+				&::placeholder {
+					color: rgb(95, 186, 176, 0.5);
+				}
+			}
+			&:hover {
+				background-color: rgba(54, 54, 54, 0.6);
+				&::placeholder {
+					color: rgb(95, 186, 176, 0.5);
+				}
+			}
+		}
+		textarea {
+			height: 22vh;
+			padding: 0.7rem;
+			resize: none;
+		}
+		input[name="subject"],
+		input[name="description"],
+		input[type="submit"],
+		textarea {
+			grid-column: span 2;
+		}
+		input[name="description"] {
+			height: 200px;
+		}
+		input[type="submit"] {
+			height: 40px;
+			padding-left: 0;
+			margin: 1rem auto 0;
+			width: 100%;
+			border: 1px solid $secondary;
+			background-color: transparent;
+			font-weight: 800;
+			transition: $fast;
+			font-size: $subHeading;
+			&:hover {
+				color: $dark;
+				background-color: $secondary;
+				border: 1px solid $dark;
+			}
+		}
+	}
+	hr {
+		border: 1px solid rgb(54, 54, 54);
+		margin-bottom: 1rem;
+	}
+	.socials {
+		@include flexCenter();
+		a {
+			@include flexCenter();
+			border-radius: 4px;
+			width: 50%;
+			height: 60px;
+			background-color: rgb(54, 54, 54);
+			font-size: 38px;
+			color: $secondary;
+			transition: $fast;
+			&:hover {
+				color: $dark;
+				background-color: $secondary;
+			}
+			&:first-child {
+				margin-right: 1rem;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.contact {
+		padding: 0;
+		margin: 2rem 1rem;
+		p {
+			font-size: 0.7rem;
+		}
+		form {
+			width: 95%;
+			input,
+			textarea {
+				width: 100%;
+			}
+		}
+	}
+}

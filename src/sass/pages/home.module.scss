@@ -1,0 +1,123 @@
+// Utilities
+@import "../utilities/variables.scss";
+@import "../utilities/mixin.scss";
+
+.home {
+	position: relative;
+	height: 90vh;
+	@include flexCenter();
+	flex-direction: column;
+	.bgTop,
+	.bgBottom {
+		height: 60vh;
+		max-height: 600px;
+		z-index: -1;
+	}
+	.bgTop {
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+	.bgBottom {
+		position: fixed;
+		bottom: 10vh;
+		right: 0;
+	}
+	.bgIntro {
+		width: 70%;
+		max-width: 740px;
+	}
+	.contact {
+		position: relative;
+		@include flexCenter();
+		margin: 1.5rem 0;
+		width: 70%;
+		max-width: 620px;
+		img {
+			width: 100%;
+		}
+		a {
+			position: absolute;
+			font-weight: 700;
+			top: 20%;
+			border: 5px solid $secondary;
+			padding: 0.5rem 2.5rem;
+			border-radius: 20px;
+			box-shadow: 0px 0px 8px $secondary;
+			transition: $fast;
+			&:hover {
+				border: 5px solid white;
+				box-shadow: 0px 0px 12px white;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	.home {
+		.bgTop,
+		.bgBottom {
+			height: 40vh;
+		}
+		.bgIntro,
+		.contact {
+			width: 85%;
+		}
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.home {
+		.bgTop,
+		.bgBottom {
+			height: 30vh;
+		}
+		.bgIntro,
+		.contact {
+			width: 85%;
+		}
+		.contact {
+			margin-top: 4rem;
+			a {
+				padding: 0.4rem 1rem;
+				box-shadow: 0px 0px 4px $secondary;
+			}
+		}
+	}
+}
+
+// .intro {
+// 		@include flexCenter();
+// 		flex-direction: column;
+// 		.line1 {
+// 			// background-color: red;
+// 			font-size: 64px;
+// 			font-weight: 700;
+// 			padding: 0.5rem 1rem 0;
+// 			margin-bottom: 8px;
+// 			-webkit-text-stroke-width: 1px;
+// 			-webkit-text-stroke-color: black;
+// 			text-shadow: 2px 1px 0px #5fbab0;
+// 			border-top: 4px solid white;
+// 			border-right: 4px solid white;
+// 			border-left: 4px solid white;
+// 			border-top-right-radius: 60px;
+// 			border-top-left-radius: 60px;
+// 			box-shadow: 0px 0px 20px #ffffff;
+// 			background-color: none;
+// 		}
+// 		.line2 {
+// 			background-color: $secondary;
+// 			font-family: $lobster;
+// 			font-weight: 400;
+// 			font-size: 76px;
+// 			text-shadow: 4px 4px 0px #1e1e1e;
+// 			padding: 0.5rem 1.5rem;
+// 			border-radius: 10px;
+// 		}
+// 		.line3 {
+// 			// background-color: orange;
+// 			font-size: 28px;
+// 			font-weight: 400;
+// 		}
+// 	}

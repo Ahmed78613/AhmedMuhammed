@@ -1,0 +1,54 @@
+// Utilities
+@import "../utilities/variables.scss";
+@import "../utilities/mixin.scss";
+
+.navbar {
+	@include flexCenter;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: black;
+	height: 10vh;
+	a {
+		@include flexCenter();
+		flex-direction: column;
+		height: 100%;
+		width: 150px;
+		opacity: 0.8;
+		&:hover {
+			transition: $fast;
+			color: $secondary;
+			opacity: 1;
+			animation: shake $medium;
+		}
+		i {
+			font-size: 32px;
+		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.navbar {
+		a {
+			width: 80px;
+			font-size: $mobile;
+			opacity: 1;
+		}
+	}
+}
+
+@keyframes shake {
+	0% {
+		transform: rotate(0deg);
+	}
+	35% {
+		transform: rotate(5deg);
+	}
+	70% {
+		transform: rotate(-5deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}

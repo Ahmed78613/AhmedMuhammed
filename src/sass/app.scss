@@ -1,0 +1,48 @@
+// Utilities
+@import "./utilities/variables.scss";
+@import "./utilities/mixin.scss";
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: $poppins;
+	color: white;
+	background-color: $dark;
+}
+
+main {
+	overflow-x: hidden;
+	height: 90vh;
+}
+
+a,
+button,
+input,
+textarea {
+	font-family: inherit;
+	text-decoration: none;
+	color: white;
+}
+
+::-webkit-scrollbar {
+	width: 0.25em;
+}
+
+::-webkit-scrollbar-track {
+	background-color: rgb(44, 44, 44);
+}
+::-webkit-scrollbar-thumb {
+	background-color: $secondary;
+}
+
+@supports (scrollbar-color: rgb(44, 44, 44) black) {
+	* {
+		scrollbar-width: thin;
+	}
+}

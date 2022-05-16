@@ -1,0 +1,136 @@
+// Utilities
+@import "../utilities/variables.scss";
+@import "../utilities/mixin.scss";
+
+.experience {
+	@include setContainer();
+	h1 {
+		@include setH1();
+	}
+	h2 {
+		margin-bottom: 1rem;
+		margin-left: 2rem;
+	}
+
+	.details {
+		.item {
+			margin-bottom: 2rem;
+			position: relative;
+			transform: translateX(40px);
+			&::before {
+				position: absolute;
+				content: "";
+				top: 15px;
+				left: -40px;
+				height: 1px;
+				width: 60px;
+				background-color: rgba(255, 255, 255, 0.3);
+				z-index: -1;
+			}
+			&::after {
+				position: absolute;
+				content: "";
+				top: 15px;
+				bottom: -15px;
+				right: 15px;
+				left: -40px;
+				background-color: transparent;
+				border-left: 1px solid rgba(255, 255, 255, 0.3);
+				border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+				z-index: -1;
+			}
+			p {
+				transform: translateX(-15px);
+			}
+		}
+		.bottomDiv {
+			.internship {
+				margin-right: 2rem;
+			}
+			transform: translateX(15px);
+			@include flexCenter();
+			.bottomItem {
+				position: relative;
+				padding: 1rem;
+				text-align: center;
+				&::before {
+					position: absolute;
+					content: "";
+					top: 35px;
+					bottom: 0;
+					right: 0;
+					left: 0;
+					border: 1px solid rgba(255, 255, 255, 0.3);
+					z-index: -1;
+				}
+				h2 {
+					display: inline;
+					background-color: $dark;
+					margin-left: 0;
+					padding: 0 0.7rem;
+				}
+				p {
+					margin: 0.5rem;
+				}
+			}
+		}
+		.skills {
+			padding: 1rem 0.5rem;
+			transform: translateX(15px);
+			@include flexCenter();
+			background-color: rgba(255, 255, 255, 0.05);
+			margin-top: 2rem;
+			font-family: monospace, sans-serif;
+			font-size: 1;
+			h3 {
+				color: $secondary;
+				span {
+					margin: 0 0.5rem;
+					color: white;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.experience {
+		padding: 6rem 4rem 2rem;
+		.details {
+			.bottomDiv {
+				.internship {
+					margin-right: 1rem;
+				}
+			}
+			.skills {
+				font-size: 0.5rem;
+				padding: 1rem 0.5rem;
+				h3 {
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.experience {
+		padding: 2rem;
+		.details {
+			grid-template-columns: 1fr;
+			.bottomDiv {
+				flex-direction: column;
+				.internship {
+					margin-right: 0;
+				}
+			}
+			transform: translateX(-15px);
+			p {
+				font-size: 0.8rem;
+			}
+			.skills {
+				font-size: 0.4rem;
+			}
+		}
+	}
+}

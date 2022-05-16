@@ -1,0 +1,26 @@
+// Utilities
+@import "../utilities/variables.scss";
+@import "../utilities/mixin.scss";
+
+.about {
+	@include setContainer();
+	h1 {
+		@include setH1();
+	}
+	h2 {
+		margin-bottom: 4px;
+	}
+	.details {
+		background-color: rgba(255, 255, 255, 0.05);
+		padding: 2rem 1rem;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.about {
+		padding: 2rem 1.5rem;
+		h1 {
+			padding-bottom: 1rem;
+		}
+	}
+}

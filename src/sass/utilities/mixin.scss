@@ -1,0 +1,22 @@
+@import "./variables.scss";
+
+// Flex center
+@mixin flexCenter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin setH1 {
+	color: $secondary;
+	font-size: $mainHeading;
+	text-transform: uppercase;
+	padding-bottom: 1rem;
+}
+
+@mixin setContainer {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 6rem 6rem 2rem;
+	height: 90vh;
+}
