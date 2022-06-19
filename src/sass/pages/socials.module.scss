@@ -1,0 +1,26 @@
+// Utilities
+@import "../utilities/variables.scss";
+@import "../utilities/mixin.scss";
+
+.socials {
+	@include flexCenter();
+	flex-direction: column;
+	position: absolute;
+	background-color: $dark;
+	border-left: 2px solid $secondary;
+	border-bottom: 2px solid $secondary;
+	top: 0;
+	right: 0;
+	overflow: hidden;
+	i {
+		color: $secondary;
+		font-size: 2rem;
+		padding: 0.25em;
+		transition: $fast;
+
+		&:hover {
+			color: white;
+			transform: scale(1.05);
+		}
+	}
+}

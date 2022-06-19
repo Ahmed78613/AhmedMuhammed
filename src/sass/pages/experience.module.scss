@@ -14,8 +14,8 @@
 
 	.details {
 		.item {
-			margin-bottom: 2rem;
 			position: relative;
+			margin-bottom: 2rem;
 			transform: translateX(40px);
 			&::before {
 				position: absolute;
@@ -113,9 +113,14 @@
 	}
 }
 
+@media only screen and (max-width: 1400px) {
+	.experience {
+		padding: 2rem 1.5rem;
+	}
+}
+
 @media only screen and (max-width: 700px) {
 	.experience {
-		padding: 2rem;
 		.details {
 			grid-template-columns: 1fr;
 			.bottomDiv {

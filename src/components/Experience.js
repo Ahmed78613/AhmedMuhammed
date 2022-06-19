@@ -53,8 +53,8 @@ function Experience() {
 				</div>
 				<div className={styles.skills}>
 					<h3>
-						<span>&#60;</span> Frontend | ReactJS | Javascript | CSS/Sass | HTML
-						| UI/UX Design
+						<span>&#60;</span> Frontend | React | Javascript | CSS/Sass | HTML |
+						UI/UX
 						<span>/&#62;</span>
 					</h3>
 				</div>

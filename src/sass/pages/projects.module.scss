@@ -8,11 +8,8 @@
 		@include setH1();
 	}
 	.grid {
-		display: grid;
+		@include gridCenter();
 		grid-template-columns: repeat(3, 1fr);
-		justify-content: center;
-		align-items: center;
-		justify-items: center;
 		grid-gap: 20px;
 		grid-auto-rows: minmax(100px, 250px);
 		background-color: rgba(255, 255, 255, 0.05);
@@ -89,9 +86,14 @@
 	}
 }
 
+@media only screen and (max-width: 1400px) {
+	.projects {
+		padding: 2rem 1.5rem;
+	}
+}
+
 @media only screen and (max-width: 800px) {
 	.projects {
-		padding: 2rem 4rem 2rem;
 		h1 {
 			text-align: center;
 		}
@@ -110,7 +112,6 @@
 		h1 {
 			text-align: center;
 		}
-		padding: 1rem 3rem 1rem;
 		.grid {
 			grid-template-columns: 1fr;
 		}

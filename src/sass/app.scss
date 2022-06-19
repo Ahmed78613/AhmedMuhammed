@@ -17,8 +17,7 @@ body {
 }
 
 main {
-	overflow-x: hidden;
-	height: 90vh;
+	height: auto;
 }
 
 a,
@@ -35,14 +34,14 @@ strong {
 }
 
 ::-webkit-scrollbar {
-	width: 0.25em;
+	width: 0.75em;
 }
 
 ::-webkit-scrollbar-track {
-	background-color: rgb(44, 44, 44);
+	background-color: rgb(71, 71, 71);
 }
 ::-webkit-scrollbar-thumb {
-	background-color: $secondary;
+	background-color: rgb(41, 41, 41);
 }
 
 @supports (scrollbar-color: rgb(44, 44, 44) black) {

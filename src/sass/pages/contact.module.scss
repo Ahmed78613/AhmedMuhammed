@@ -13,7 +13,7 @@
 	}
 	form {
 		margin: 1rem auto;
-		max-width: 1000px;
+		width: 100%;
 		display: grid;
 		justify-content: center;
 		align-items: center;
@@ -97,19 +97,19 @@
 	}
 }
 
+@media only screen and (max-width: 1000px) {
+	.contact {
+		padding: 2rem 1.5rem;
+	}
+}
+
 @media only screen and (max-width: 600px) {
 	.contact {
-		padding: 0;
-		margin: 2rem 1rem;
 		p {
 			font-size: 0.7rem;
 		}
-		form {
-			width: 95%;
-			input,
-			textarea {
-				width: 100%;
-			}
+		i {
+			font-size: 30px;
 		}
 	}
 }

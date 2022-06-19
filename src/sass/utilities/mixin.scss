@@ -1,13 +1,20 @@
 @import "./variables.scss";
 
 // Flex center
-@mixin flexCenter {
+@mixin flexCenter($align: center, $justify: center) {
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+@mixin gridCenter($align: center, $justify: center) {
+	display: grid;
+	justify-content: $justify;
+	align-items: $align;
 }
 
 @mixin setH1 {
+	font-family: $main;
 	color: $secondary;
 	font-size: $mainHeading;
 	text-transform: uppercase;
@@ -15,8 +22,10 @@
 }
 
 @mixin setContainer {
+	@include flexCenter(left, center);
+	flex-direction: column;
 	max-width: 1400px;
 	margin: 0 auto;
-	padding: 6rem 6rem 2rem;
-	height: 90vh;
+	margin: 5em auto;
+	text-align: left;
 }
