@@ -8,13 +8,15 @@
 		@include setH1();
 	}
 	h2 {
-		margin: 1em 0;
+		margin: 0.5em 0;
 	}
 	.latest {
 		@include gridCenter();
 		grid-template-columns: 1fr 1fr;
 		background-color: rgba(255, 255, 255, 0.05);
 		height: 60vh;
+		margin-bottom: 2em;
+		padding: 2em;
 		.latestGallery {
 			@include gridCenter();
 			grid-template-columns: auto auto auto;
@@ -152,11 +154,36 @@
 	}
 }
 
+@media only screen and (max-width: 1000px) {
+	.projects {
+		.latest {
+			grid-template-columns: 1fr;
+			height: auto;
+		}
+	}
+}
+
 @media only screen and (max-width: 800px) {
 	.projects {
-		h1 {
+		h1,
+		h2,
+		h3,
+		p,
+		ul {
 			text-align: center;
+			width: 100%;
+			list-style: none;
 		}
+		.latest {
+			a {
+				align-self: center;
+				width: 50% !important;
+				min-width: 120px;
+				text-align: center;
+				margin: 0 auto;
+			}
+		}
+
 		.grid {
 			grid-template-columns: 1fr 1fr;
 		}

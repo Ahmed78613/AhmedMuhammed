@@ -17,8 +17,8 @@ function Projects() {
 	const slideImages = [latestFirst, latestSecond, latestThird];
 
 	function openImage(e) {
-		const img = e.target.src;
-		setImg(img);
+		const currentImg = e.target.src;
+		setImg(currentImg);
 	}
 
 	function closeImage() {
