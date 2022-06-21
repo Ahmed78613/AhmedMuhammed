@@ -8,13 +8,12 @@
 	text-align: center;
 	h1 {
 		@include setH1();
-		font-size: max(3.5vw, 32px);
-		padding: 0;
 	}
 	form {
 		margin: 1em auto;
 		width: 100%;
 		display: grid;
+		column-gap: 5px;
 		justify-content: center;
 		align-items: center;
 		grid-template-columns: 1fr 1fr;
@@ -26,6 +25,7 @@
 			font-family: $poppins;
 			padding-left: 0.7rem;
 			margin: 0.2rem;
+			width: 100%;
 			&:focus {
 				outline: 1px solid $secondary;
 				background-color: rgba(54, 54, 54, 0.6);
