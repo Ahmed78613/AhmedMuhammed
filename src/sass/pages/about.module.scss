@@ -8,11 +8,14 @@
 		@include setH1();
 	}
 	h2 {
-		margin-bottom: 4px;
+		margin-bottom: 0.5em;
+	}
+	p {
+		margin-bottom: 1em;
 	}
 	.details {
 		background-color: rgba(255, 255, 255, 0.05);
-		padding: 2rem 1rem;
+		padding: 2rem;
 	}
 }
 

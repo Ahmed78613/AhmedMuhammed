@@ -6,7 +6,7 @@ function Contact() {
 		<main className={styles.contact}>
 			<h1>Contact Page</h1>
 			<p>
-				If you would like to contact me fill please in the form below and I will
+				If you would like to contact me please fill in the form below and I will
 				get back to you as soon as I possibly can. You can also reach me on my
 				LinkedIn or github.
 			</p>

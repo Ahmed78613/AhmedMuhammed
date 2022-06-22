@@ -39,7 +39,7 @@ function Experience() {
 						<p>
 							2-month internship as a front-end web developer, utilising
 							WordPress. Designed, created and delivered a website alongside my
-							team for a financially based business.
+							team for a finance based business.
 						</p>
 					</div>
 					<div className={styles.bottomItem}>
