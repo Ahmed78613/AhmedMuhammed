@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/AhmedMuhammed/static/css/main.51a1617b.css",
-    "main.js": "/AhmedMuhammed/static/js/main.ce8f031b.js",
+    "main.css": "/AhmedMuhammed/static/css/main.f2c73995.css",
+    "main.js": "/AhmedMuhammed/static/js/main.4818a0b6.js",
     "static/media/tv-app.png": "/AhmedMuhammed/static/media/tv-app.28b1d1ef96d6be88ef72.png",
     "static/media/latest1.png": "/AhmedMuhammed/static/media/latest1.07c96df35955e9ab139f.png",
     "static/media/latest2.png": "/AhmedMuhammed/static/media/latest2.e6d4a6a2d71a2e2b652c.png",
@@ -14,11 +14,11 @@
     "static/media/gallery.png": "/AhmedMuhammed/static/media/gallery.35fcfd2d5d7cdde75191.png",
     "static/media/quiz-app.png": "/AhmedMuhammed/static/media/quiz-app.e38a3b503671e337e68d.png",
     "index.html": "/AhmedMuhammed/index.html",
-    "main.51a1617b.css.map": "/AhmedMuhammed/static/css/main.51a1617b.css.map",
-    "main.ce8f031b.js.map": "/AhmedMuhammed/static/js/main.ce8f031b.js.map"
+    "main.f2c73995.css.map": "/AhmedMuhammed/static/css/main.f2c73995.css.map",
+    "main.4818a0b6.js.map": "/AhmedMuhammed/static/js/main.4818a0b6.js.map"
   },
   "entrypoints": [
-    "static/css/main.51a1617b.css",
-    "static/js/main.ce8f031b.js"
+    "static/css/main.f2c73995.css",
+    "static/js/main.4818a0b6.js"
   ]
 }
