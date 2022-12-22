@@ -1,0 +1,127 @@
+// Utilities
+@import "../utilities/variables.scss";
+@import "../utilities/mixin.scss";
+
+.modal {
+	@include flexCenter();
+	position: fixed;
+	background-color: #1e1e1eda;
+	top: 0;
+	right: 0;
+	bottom: 10vh;
+	left: 0;
+	.modalContent {
+		display: grid;
+		grid-template-columns: 60% 40%;
+		background-color: black;
+		width: 90%;
+		max-width: 1200px;
+		height: 80vh;
+		color: black;
+		overflow: hidden;
+		box-shadow: 6px 6px 0 rgba(255, 255, 255, 0.1);
+		.modalLeft {
+			position: relative;
+			@include flexCenter();
+			height: 80vh;
+			img {
+				max-width: 100%;
+				max-height: 75vh;
+			}
+			.modalPrevSlide,
+			.modalNextSlide {
+				position: absolute;
+				color: #5fbab0;
+				font-size: 30px;
+				transition: $fast;
+				opacity: 0.5;
+				&:hover {
+					opacity: 1;
+					cursor: pointer;
+				}
+			}
+			.modalPrevSlide {
+				left: 20px;
+			}
+			.modalNextSlide {
+				right: 20px;
+			}
+		}
+		.modalRight {
+			position: relative;
+			padding: 1rem;
+			background-color: #5fbab0;
+			.modalCloseBtn {
+				position: absolute;
+				top: 20px;
+				right: 20px;
+				font-size: 34px;
+				color: #1e1e1e;
+				opacity: 0.7;
+				transition: $fast;
+				&:hover {
+					opacity: 1;
+					cursor: pointer;
+				}
+			}
+			h1 {
+				color: black;
+				padding: 0;
+			}
+			.modalDetails {
+				margin: 0.5rem;
+			}
+			.technologies {
+				@include flexCenter();
+				flex-wrap: wrap;
+				.techItem {
+					font-size: 14px;
+					flex: 1 1 0;
+					text-align: center;
+					background-color: #1e1e1e;
+					color: white;
+					font-weight: 800;
+					padding: 1rem;
+					margin: 0.25rem;
+					box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.445);
+					transition: $fast;
+					&:hover {
+						box-shadow: 4px 4px 0 white;
+						cursor: pointer;
+						background-color: black;
+					}
+				}
+			}
+			.modalBtn {
+				display: block;
+				width: 50%;
+				text-align: center;
+				background-color: white;
+				padding: 0.5rem 0;
+				font-size: 20px;
+				font-weight: 800;
+				border: none;
+				color: black;
+				box-shadow: 4px 4px 0 black;
+				transition: $fast;
+				margin: 1rem 0.25rem;
+				&:hover {
+					cursor: pointer;
+					background-color: #1e1e1e;
+					color: white;
+					box-shadow: 4px 4px 0 white;
+				}
+			}
+		}
+	}
+}
+
+// @media only screen and (max-width: 600px) {
+// 	.navbar {
+// 		a {
+// 			width: 80px;
+// 			font-size: $mobile;
+// 			opacity: 1;
+// 		}
+// 	}
+// }
