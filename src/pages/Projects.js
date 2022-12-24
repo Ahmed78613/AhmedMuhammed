@@ -6,6 +6,9 @@ import latestThird from "../assets/Risk-Register/latest1.png";
 import Project from "../components/Project";
 import projectsData from "../data";
 import Modal from "../components/Modal";
+import Layout from "../components/Layout";
+import TypewriterComponent from "typewriter-effect";
+
 function Projects() {
 	const [slide, setSlide] = useState(0);
 	const [viewProjectModal, setViewProjectModal] = useState("");
@@ -30,81 +33,91 @@ function Projects() {
 	};
 
 	return (
-		<main className={styles.projects}>
-			<h1>Projects</h1>
-			<h2>Latest</h2>
-			<div className={styles.latest}>
-				<div className={styles.latestGallery}>
-					<i
-						className="fa-solid fa-circle-left"
-						onClick={() => updateSlideshow("left")}
+		<Layout>
+			<main className={styles.projects}>
+				<h1>
+					<TypewriterComponent
+						options={{
+							strings: ["My Projects"],
+							autoStart: true,
+							pauseFor: 10000000000,
+						}}
 					/>
-					<img src={slideImages[slide]} alt="" />
-					<i
-						className="fa-solid fa-circle-right"
-						onClick={() => updateSlideshow("right")}
-					/>
-				</div>
-				<div className={styles.latestDetails}>
-					<h3>Risk Reverse</h3>
-					<p>
-						Risk register-based risk assessment/management methodology. All the
-						risks can also be viewed on a single page and removed/modified
-						there. The “Dashboard” and “View all” pages provide stats such as
-						score, average probability, average impact, average risk level,
-						total risks, high-level risks and a doughnut chart for
-						visualization.
-						<br />
-						<br />
-					</p>
-					<ul>
-						<li>Add, Modify, Remove &#38; Prioritize risks</li>
-						<li>Statistics &#38; Graphs</li>
-						<li>No Sign up/in Required</li>
-						<li>Dark Mode</li>
-					</ul>
+				</h1>
+				<h2>Featured</h2>
+				<div className={styles.latest}>
+					<div className={styles.latestGallery}>
+						<i
+							className="fa-solid fa-circle-left"
+							onClick={() => updateSlideshow("left")}
+						/>
+						<img src={slideImages[slide]} alt="" />
+						<i
+							className="fa-solid fa-circle-right"
+							onClick={() => updateSlideshow("right")}
+						/>
+					</div>
+					<div className={styles.latestDetails}>
+						<h3>Risk Reverse</h3>
+						<p>
+							Risk register-based risk assessment/management methodology. All
+							the risks can also be viewed on a single page and removed/modified
+							there. The “Dashboard” and “View all” pages provide stats such as
+							score, average probability, average impact, average risk level,
+							total risks, high-level risks and a doughnut chart for
+							visualization.
+							<br />
+							<br />
+						</p>
+						<ul>
+							<li>Add, Modify, Remove &#38; Prioritize risks</li>
+							<li>Statistics &#38; Graphs</li>
+							<li>No Sign up/in Required</li>
+							<li>Dark Mode</li>
+						</ul>
 
-					<a
-						href="https://ahmed78613.github.io/risk-register-app/"
-						target="blank"
-					>
-						Live
-					</a>
-					<a
-						href="https://github.com/Ahmed78613/risk-register-app"
-						target="blank"
-					>
-						Github
-					</a>
+						<a
+							href="https://ahmed78613.github.io/risk-register-app/"
+							target="blank"
+						>
+							Live
+						</a>
+						<a
+							href="https://github.com/Ahmed78613/risk-register-app"
+							target="blank"
+						>
+							Github
+						</a>
+					</div>
 				</div>
-			</div>
-			<h2>Other projects</h2>
-			<section className={styles.grid}>
-				{projectsData?.map((project, i) => (
-					<Project
-						key={i}
-						title={project.title}
-						image={project.images[0]}
-						description={project.description}
-						solo={project.solo}
-						technologies={project.technologies}
-						githubUrl={project.githubUrl}
+				<h2>All Projects</h2>
+				<section className={styles.grid}>
+					{projectsData?.map((project, i) => (
+						<Project
+							key={i}
+							title={project.title}
+							image={project.images[0]}
+							description={project.description}
+							solo={project.solo}
+							technologies={project.technologies}
+							githubUrl={project.githubUrl}
+							viewOrCloseProject={viewOrCloseProject}
+						/>
+					))}
+				</section>
+				{viewProjectModal && (
+					<Modal
+						title={viewProjectModal.title}
+						images={viewProjectModal.images}
+						description={viewProjectModal.description}
+						solo={viewProjectModal.solo}
+						technologies={viewProjectModal.technologies}
+						githubUrl={viewProjectModal.githubUrl}
 						viewOrCloseProject={viewOrCloseProject}
 					/>
-				))}
-			</section>
-			{viewProjectModal && (
-				<Modal
-					title={viewProjectModal.title}
-					images={viewProjectModal.images}
-					description={viewProjectModal.description}
-					solo={viewProjectModal.solo}
-					technologies={viewProjectModal.technologies}
-					githubUrl={viewProjectModal.githubUrl}
-					viewOrCloseProject={viewOrCloseProject}
-				/>
-			)}
-		</main>
+				)}
+			</main>
+		</Layout>
 	);
 }
 

@@ -57,7 +57,7 @@ const projectsData = [
 			happyHolidays8,
 		],
 		description:
-			"Christmas themed wishlist app. Set and find what you and your frineds 'want', 'dislike' and 'dream' of to make the right purchase. Also use a price comparison to help you find the best prices and much more.",
+			"Christmas-themed wishlist app. Set and find what you and your friends 'want', 'dislike', and 'dream' of to make the right purchase. Also, use a price comparison tool to help you find the best prices and much more.",
 		technologies: [
 			"JavaScript/CSS/HTML",
 			"Python",
